@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-class Goal:  # Note that parens are optional if not inheriting from another class
+class Goal:
   def __init__(self, name, description, category):
     self.name = name
     self.description = description
