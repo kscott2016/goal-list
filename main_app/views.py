@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.contrib.auth.views import LoginView
 from .models import Goal 
 
 # class Goal:
@@ -8,8 +9,8 @@ from .models import Goal
 #     self.description = description
 #     self.category = category
 
-def home(request):
-  return render(request, 'home.html')
+# def home(request):
+#   return render(request, 'home.html')
 
 def about(request):
   return render(request, 'about.html')
@@ -34,3 +35,6 @@ class GoalUpdate(UpdateView):
 class GoalDelete(DeleteView):
   model = Goal
   success_url = '/goals/'
+
+class Home(LoginView):
+  template_name = 'home.html'
