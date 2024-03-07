@@ -15,7 +15,7 @@ th {
   padding: 6px 20px 0 0;
   font-weight: normal;
   vertical-align: top;
-  font-size: var(--font-reg);
+  font-size: var(--font-l);
 }
 
 td {
@@ -25,12 +25,21 @@ td {
 td > * {
   width: 100%;
   padding: 2px 4px;
-  font-size: var(--font-l);
+  font-size: var(--font-reg);
 }
 
 td > textarea {
   height: calc(4 * var(--font-l) + 8px);
   font-family: inherit;
+}
+
+#id_priority{
+  text-align: left;
+}
+
+#id_completed{
+  height: 2rem;
+  text-align: left;
 }
 
 .btn {

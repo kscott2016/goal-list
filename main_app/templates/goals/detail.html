@@ -21,7 +21,13 @@
   <div class="cat-details">
     <h1>{{ goal.name }}</h1>
     <p>{{ goal.description }}</p>
-    <p>{{ cat.description }}</p>
+    <p>{{goal.get_category_display}}</p>
+    {% if goal.completed %}
+      <p>Status: Crushed it!</p>
+    {% else %}
+      <p>Status: In progress</p>
+    {% endif %}
+  
     {% comment %} New markup {% endcomment %}
     <div class="cat-actions">
       <a href="{% url 'goal-update' goal.id %}" class="btn warn">Edit</a>

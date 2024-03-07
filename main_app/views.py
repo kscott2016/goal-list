@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth.views import LoginView
 from django.contrib.auth import login
@@ -32,7 +32,7 @@ def goal_detail(request, goal_id):
 
 class GoalCreate(LoginRequiredMixin, CreateView):
   model = Goal
-  fields = '__all__'
+  fields = ['name', 'description', 'category']
 
   def form_valid(self, form):
     form.instance.user = self.request.user
@@ -41,7 +41,7 @@ class GoalCreate(LoginRequiredMixin, CreateView):
 
 class GoalUpdate(LoginRequiredMixin, UpdateView):
   model = Goal
-  fields = ['name', 'description', 'category','priority']
+  fields = ['name', 'description', 'category','completed']
 
 class GoalDelete(LoginRequiredMixin, DeleteView):
   model = Goal
@@ -59,7 +59,7 @@ def signup(request):
       user = form.save()
       # This is how we log a user in
       login(request, user)
-      return redirect('cat-index')
+      return redirect('goal-index')
     else:
       error_message = 'Invalid sign up - try again'
 

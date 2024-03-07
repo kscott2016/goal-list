@@ -13,21 +13,24 @@ html {
 
 /* resets font size to be 62.5% of the user preference - 
      in most browser configurations this will be 10px */
-:root {
+/* :root {
   font-size: 62.5%
-}
+} */
 
 body {
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 
     'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 
-    'Helvetica Neue', sans-serif;
+    'Helvetica Neue', sans-serif; */
+  font-family: "Delius", cursive;
+  font-weight: 400;
+  font-style: normal;
   min-height: 100vh;
-  --nav-bg: rgba(104, 197, 248, .7);
-  --nav-bg-ff: rgba(104, 197, 248, .9);
+  --nav-bg: rgba(72, 215, 255, 0.7);
+  --nav-bg-ff: rgba(255, 255, 255, 0.9);
   --borders: rgb(36, 116, 248) solid 2px;
   --text-color: rgb(17, 20, 17);
   --link-hover-color: rgb(16, 56, 158);
@@ -39,17 +42,12 @@ body {
   --secondary: rgb(57, 57, 57);
   --card-box-shadow: 5px 5px 6px -1px #AAA;
   --font-xtreme: 4.2rem;
-  --font-xxl: 3.6rem;
-  --font-xl: 2.4rem;
+  --font-xxl: 4rem;
+  --font-xl: 2rem;
   --font-l: 1.8rem;
-  --font-reg: 1.6rem;
+  --font-reg: 1.5rem;
   --card-border-radius: 6px;
-}
-
-header {
-  width: 100%;
-  background: var(--nav-bg-ff); /* rgba(104, 197, 248, .9) */
-  border-bottom: var(--borders);
+  background-color: #ffebb5;
 }
 
 nav {
@@ -64,7 +62,8 @@ ul {
 
 main {
   width: 100%;
-  padding: 0 10px;
+  padding: 50px 10px;
+  font-size: var(--font-reg);
 }
 
 h2 {
@@ -75,7 +74,7 @@ nav a {
   text-decoration: none;
   color: var(--text-color);
   font-weight: 600;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 nav a:hover {
@@ -96,7 +95,11 @@ nav li {
 .header-logo-container {
   margin: auto;
   padding: 10px 20px 0;
-  max-width: 500px;
+  max-height: 200px;
+}
+
+img.logo{
+  max-height: 100px;
 }
 
 .page-header {
@@ -106,7 +109,7 @@ nav li {
 }
 
 .btn {
-  font-size: var(--font-l);
+  font-size: var(--font-reg);
   padding: 8px 16px;
   border-radius: 6px;
   border-width: 2px;
@@ -201,7 +204,7 @@ nav li {
   }
 
   .page-header h1 {
-    font-size: var(--font-xtreme);
+    font-size: var(--font-xl);
   }
   
   .page-header img {
@@ -228,7 +231,7 @@ nav li {
   }
   
   header {
-    margin: 20px 20px 0 20px;
+    margin: 20px 20px 50px 20px;
     width: calc(100vw - 40px);
     max-width: 1920px;
     top: 20px;
@@ -236,36 +239,8 @@ nav li {
     border-bottom: none;
   }
 
-  nav,
-  .header-logo-container {
-    margin: 0;
-    background: var(--nav-bg-ff);
-    border: var(--borders);
-    border-radius: 18px;
-  }
-
   nav {
     margin-left: auto;
   }
 
-  .header-logo-container {
-    /* visual fix to help align logo */
-    padding-top: 6px;
-    width: 256px;
-    height: 35px;
-  }
-
-  @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
-    header {
-      -webkit-backdrop-filter: none;
-      backdrop-filter: none;
-    }
-
-    nav,
-    .header-logo-container {
-      background: rgba(104, 197, 248, .6);
-      -webkit-backdrop-filter: blur(3px);
-      backdrop-filter: blur(3px);
-    }
-  }
 }
