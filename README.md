@@ -8,8 +8,8 @@ Goal Digger is your ultimate companion on the journey towards success. Whether y
 
 ## <a href="https://goal-list-krystina.fly.dev/">Visit the app here </a> 💫
 
-![Image](../goal-list/main_app/static/images/goal-digger-screenshot1.png)
-![Image](../goal-list/main_app/static/images/goal-digger-screenshot2.png)
+![Image](https://i.imgur.com/0yPrE1q.png)
+![Image](https://i.imgur.com/B67gFSe.png)
 
 
 ## Technologies used :gear:

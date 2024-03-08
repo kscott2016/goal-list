@@ -15,7 +15,7 @@
   <div class="goal-details">
     <h1>{{ goal.name }}</h1>
     <p>{{ goal.description }}</p>
-    <p>{{goal.get_category_display}}</p>
+    <p>Category: {{goal.get_category_display}}</p>
     {% if goal.completed %}
       <p>Status: Crushed it!</p>
     {% else %}
