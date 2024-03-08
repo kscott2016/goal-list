@@ -22,12 +22,10 @@
       <p>Status: In progress</p>
     {% endif %}
   
-    {% comment %} New markup {% endcomment %}
     <div class="goal-actions">
       <a href="{% url 'goal-update' goal.id %}" class="btn warn">Edit</a>
       <a href="{% url 'goal-delete' goal.id %}" class="btn danger">Delete</a>
     </div>
-    {% comment %} New markup above {% endcomment %}
   </div>
 </section>
   </div>
