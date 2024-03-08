@@ -11,6 +11,11 @@
 
 {% block content %}
   <section class="card-container">
+    {% if not user.is_authenticated%}
+      <h1 class="user-greeting">Sign up to crush your goals!</h1>
+    {% else %}
+      <h1 class="user-greeting">What goals are we crushing today {{request.user.username}}?</h1>
+    {% endif%}
     {% for goal in goals %}
       <div class="card">
         {% comment %} Add this line {% endcomment %}
