@@ -34,4 +34,5 @@ Goal Digger is your ultimate companion on the journey towards success. Whether y
 #### Ice Box Features 🧊
 <ul>
 <li>[] Implement AWS to upload images to goal detail page</li>
+<li>[] Implement a notes model with dates to track goal updates/changes</li>
 </ul>
