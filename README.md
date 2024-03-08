@@ -26,6 +26,7 @@ Goal Digger is your ultimate companion on the journey towards success. Whether y
 
 
 <ul>
+<li>Neon DB</li>
 <li>Logo design by Amelia Ellwood Design</li>
 <li>Icons from Freepik</li>
 <li>Delius font from Google fonts</li>
