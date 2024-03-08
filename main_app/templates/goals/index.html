@@ -62,6 +62,14 @@
             <div class="inner-content">
               <h2 class="card-title">{{ goal.name }}</h2>
               <p><small>{{ goal.description }}</small></p>
+              {% if goal.completed == True %}
+              <div class="completed-content">
+                <h4>You've comlpeted this goal!</h4>
+                <img class="completed-badge"
+                src="{% static 'images/complete-badge.png' %}" 
+                alt="Goal Completed"> 
+              </div>
+            {% endif %}
             </div>
           </div>
         {% comment %} And this line {% endcomment %}
