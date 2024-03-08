@@ -6,15 +6,18 @@
 {% endblock %}
 
 {% block content %}
+<h1>Become a Goal Digger</h1>
+<p>Goal Digger is your ultimate companion on the journey towards success. Whether you aspire to climb mountains, launch a business, or simply lead a healthier lifestyle, this app is designed to empower you to set, track, and achieve your goals effectively.</p>
 
 <section class="logo-container">
-  <div class="cat-container">
+  <div class="goal-container">
     <img 
     src="{% static 'images/goal-digger-logo3.png' %}" 
-    alt="Text reads: Cat Collector"
+    alt="Text reads:Goal Digger"
   />
   </div>
 </section>
+
 
 {% if not user.is_authenticated %}
   <section>

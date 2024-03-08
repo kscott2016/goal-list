@@ -5,20 +5,14 @@
 <link 
   rel="stylesheet" 
   type="text/css" 
-  href="{% static 'css/cats/cat-detail.css' %}"
+  href="{% static 'css/goals/goal-detail.css' %}"
 />
 {% endblock %}
 
 {% block content %}
 
-<section class="cat-container">
-  <div class="cat-img">
-    <img 
-      src="{% static 'images/sk8r-boi-cat.svg' %}" 
-      alt="A skater boy cat"
-    >
-  </div>
-  <div class="cat-details">
+<section class="goal-container">
+  <div class="goal-details">
     <h1>{{ goal.name }}</h1>
     <p>{{ goal.description }}</p>
     <p>{{goal.get_category_display}}</p>
@@ -29,7 +23,7 @@
     {% endif %}
   
     {% comment %} New markup {% endcomment %}
-    <div class="cat-actions">
+    <div class="goal-actions">
       <a href="{% url 'goal-update' goal.id %}" class="btn warn">Edit</a>
       <a href="{% url 'goal-delete' goal.id %}" class="btn danger">Delete</a>
     </div>

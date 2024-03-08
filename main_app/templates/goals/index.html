@@ -18,36 +18,37 @@
           <div class="card-content">
             <div class="card-img-container">
               {% if goal.get_category_display == 'Family' %}
-                <img class="card-icon"
+                <img class="card-icon" style="background-color: #ff9272"
                 src="{% static 'images/family.svg' %}" 
                 alt="Family">
 
               {% elif goal.get_category_display == "Career" %}
-                <img class="card-icon"
+                <img class="card-icon" style="background-color: #74d4e1"
                 src="{% static 'images/career.svg' %}" 
                 alt="Career">
               
               {% elif goal.get_category_display == "Financial" %}
                 <img class="card-icon"
+                style="background-color: #9ad359"
                 src="{% static 'images/financial.svg' %}" alt="Financial">
 
               {% elif goal.get_category_display == "Health" %}
-                <img class="card-icon"
+                <img class="card-icon health"  style="background-color: #f1827a"
                 src="{% static 'images/health.svg' %}" 
                 alt="Health">
 
               {% elif goal.get_category_display == "Social" %}
-              <img class="card-icon"
+              <img class="card-icon" style="background-color: #ceb2ff"
               src="{% static 'images/social.svg' %}" 
               alt="Social">
 
               {% elif goal.get_category_display == "Education" %}
-              <img class="card-icon"
+              <img class="card-icon" style="background-color: #ffc107"
               src="{% static 'images/education.svg' %}" 
               alt="Education">
 
               {% else %}
-              <img class="card-icon"
+              <img class="card-icon" style="background-color: #009688"
               src="{% static 'images/growth.svg' %}" 
               alt="Personal Growth"> 
 

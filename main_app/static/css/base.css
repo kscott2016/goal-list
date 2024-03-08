@@ -241,6 +241,10 @@ img.logo{
 
   nav {
     margin-left: auto;
+    background: rgba(104, 197, 248, .6);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    font-size: var(--font-l);
   }
 
 }
